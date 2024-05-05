@@ -1,0 +1,5 @@
+Commands:
+
+To start : docker-compose up --build -d
+To open a new terminal : docker exec -it <docker container id or name> bash
+To exit and stop the container: docker-compose down
