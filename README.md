@@ -10,8 +10,43 @@ Open the 'src' folder in the template with your favourite IDE and start developi
 ```
 ## Table of Contents
 
-- For Windows
 - For Linux
+- For Windows
+
+
+## For Linux
+### Introduction
+
+'Linux' folder contains the docker template configured for linux.
+
+### Prerequisites
+
+Following need to be installed before start developments:
+
+- Docker
+
+## Instructions
+
+1. Clone this repository
+2. Navigate to docker folder, 
+    - on Windows, Use a terminal and navigate to 'Windows/docker/' folder
+    - on Linux, Use a terminal and navigate to 'Linux/docker/' folder
+3. Use the following command run the script that build the image and start a container. This will build the image and start a container. 
+    Also will enable x11 forwarding so that container can access the display for GUI apps
+
+    ` ./ros2_linux.sh up `
+
+4. Use docker commands or GUI to open a terminal for the container.
+
+    ` docker exec -it <container_id or name> bash `
+
+5. You can now develop using using an IDE to edit files in the 'src' folder and use terminals to run applications. 
+
+6. To stop the container use the following command. This will stop x11 forward that used to access display
+
+    ` ./ros2_linux.sh down`
+
+
 
 ## For Windows
 ### Introduction
@@ -65,5 +100,4 @@ or else you can use dos2unix convertor inside the container to convert the file 
 ` Doing this once is enough since, editor will recognize the End of Line Sequence and use it in the future for that specific file`
 
 
-## For Linux
-Coming Soon...
+
